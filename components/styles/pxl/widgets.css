@@ -1,0 +1,59 @@
+
+/**
+  @deprecated use display-w-* instead
+**/
+@utility widget-w-* {
+  --widget-width: --value(--widget-width-*, [length], [*]);
+}
+
+/**
+  @deprecated use display-h-* instead
+**/
+@utility widget-h-* {
+  --widget-height: --value(--widget-height-*, [length], [*]);
+}
+
+/**
+  @deprecated use display-size-* instead
+**/
+@utility widget-size-* {
+  --widget-width: --value(--widget-width-*, [length], [*]);
+  --widget-height: --value(--widget-height-*, [length], [*]);
+}
+
+/**
+  @deprecated use display instead
+**/
+@utility widget {
+  --w-width: var(--widget-width, var(--widget-width-sm));
+  --w-height: var(--widget-height, var(--widget-height-sm));
+
+  width: 100%;
+  height: 100%;
+  max-width: var(--w-width);
+  max-height: var(--w-height);
+}
+
+@utility display-w-* {
+  --display-width: --value(--display-width-*, [length], [*]);
+}
+
+@utility display-h-* {
+  --display-height: --value(--display-height-*, [length], [*]);
+}
+
+@utility display-size-* {
+  --display-width: --value(--display-width-*, [length], [*]);
+  --display-height: --value(--display-height-*, [length], [*]);
+}
+
+@utility display {
+  --w-width: var(--display-width, var(--display-width-sm));
+  --w-height: var(--display-height, var(--display-height-sm));
+
+  width: 100%;
+  height: 100%;
+  max-width: var(--w-width);
+  max-height: var(--w-height);
+
+}
